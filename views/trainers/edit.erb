@@ -1,0 +1,16 @@
+<h2>Are you sure you're a boy or girl?</h2>
+
+<form action="/trainers/<%= @trainer.id %>" method="post">
+  <input type="hidden" name="_method"method="put">
+
+  <label for="">Name</label>
+  <input type="text" name="trainer[name]">
+
+  <label for="">Level</label>
+  <input type="text" name="trainer[level]">
+
+  <label for="">Image url</label>
+  <input type="text" name=trainer[img_url]>
+
+  <button type="submit">Submit</button>
+</form>

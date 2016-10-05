@@ -4,17 +4,9 @@ require "active_record"
 
 require_relative "db/connection"
 require_relative "models/pokemon"
+require_relative "models/trainer"
 
-get '/' do
-  redirect "/pokemons"
-end
-
-get "/pokemons" do
-  @pokemon = Pokemon.all
-  erb :"pokemons/index"
-end
-
-get "/pokemons/:id" do
-  @pokemon = Pokemon.find(params[:id])
-  erb :"pokemons/show"
-end
+require_relative "crud/post.rb"
+require_relative "crud/get.rb"
+require_relative "crud/put.rb"
+require_relative "crud/delete.rb"

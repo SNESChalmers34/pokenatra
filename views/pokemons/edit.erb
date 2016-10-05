@@ -1,0 +1,19 @@
+<h2>CHANGE THAT POKEMON!</h2>
+
+<form action="/pokemons/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="">Name</label>
+  <input type="text" name="pokemon[name]" value="<%= @pokemon.name %>">
+
+  <label for="">Type</label>
+  <input type="text" name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
+
+  <label for="">CP</label>
+  <input type="text" name="pokemon[cp]" value="<%= @pokemon.cp %>">
+
+  <label for="">Image</label>
+  <input type="text" name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
+
+  <button type="submit">Submit</button>
+</form>

@@ -4,3 +4,9 @@
 </div>
 
 <div><img src="<%= @pokemon.img_url %>" alt=""></div>
+
+<p><a href="/pokemons/<%= @pokemon.id %>/edit">Edit</a></p>
+<form action="/pokemons/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Delete Artist</button>
+</form>
