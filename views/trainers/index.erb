@@ -2,5 +2,5 @@
 <p><a href="/trainers/new">New</a></p>
 
 <% @trainer.each do |trainer| %>
-  <p><%= trainer.name %></p>
+  <p><a href="/trainers/<%= trainer.id %>"><%= trainer.name %></a></p>
 <% end %>

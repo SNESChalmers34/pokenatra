@@ -29,7 +29,10 @@ get "/trainers" do
   erb :"trainers/index"
 end
 
-
+get 'trainers/:id' do
+  @trainer = Trainer.find(params[:id])
+  erb :"trainers/show"
+end
 
 get "/trainers/new" do
   erb :"trainers/new"
