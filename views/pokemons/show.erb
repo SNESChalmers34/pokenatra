@@ -1,1 +1,6 @@
-<h2><%= @pokemon.name %></h2>
+<div>
+  <h2><%= "#{@pokemon.name}: #{@pokemon.poke_type}" %></h2>
+  <h4> <%= "CP: #{@pokemon.cp}" %> </h4>
+</div>
+
+<div><img src="<%= @pokemon.img_url %>" alt=""></div>
